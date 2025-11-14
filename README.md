@@ -47,10 +47,46 @@ The built files will be in the `dist` directory.
 npm run preview
 ```
 
+## Deployment
+
+This project is configured for automatic deployment to GitHub Pages.
+
+### Automatic Deployment
+
+The project uses GitHub Actions to automatically deploy to GitHub Pages whenever you push to the `main` branch.
+
+**Deployment URL**: https://fahimku.github.io/test-assignment-form/
+
+### Manual Deployment Steps
+
+1. **Enable GitHub Pages**:
+   - Go to your repository settings on GitHub
+   - Navigate to "Pages" in the left sidebar
+   - Under "Source", select "GitHub Actions"
+
+2. **Push to main branch**:
+   ```bash
+   git add .
+   git commit -m "Deploy to GitHub Pages"
+   git push origin main
+   ```
+
+3. **Monitor deployment**:
+   - Go to the "Actions" tab in your GitHub repository
+   - Watch the workflow run and complete
+   - Once successful, your site will be live at the deployment URL
+
+The GitHub Actions workflow (`.github/workflows/deploy.yml`) will:
+- Build the React app
+- Deploy it to GitHub Pages automatically
+
 ## Project Structure
 
 ```
 test-assignment-form/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml       # GitHub Actions deployment workflow
 ├── src/
 │   ├── components/
 │   │   ├── Modal.jsx        # Modal form component
