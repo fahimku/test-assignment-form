@@ -39,7 +39,12 @@ jobs:
           echo "Build output contents:"
           ls -la dist/
           echo "Checking index.html:"
-          head -20 dist/index.html
+          cat dist/index.html
+          echo "Checking if assets exist:"
+          ls -la dist/assets/ || echo "No assets folder"
+
+      - name: Add .nojekyll file
+        run: touch dist/.nojekyll
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
