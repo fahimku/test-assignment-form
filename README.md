@@ -1,12 +1,16 @@
-# Figma Match - Assignment Form
+# Quick Form Styling - Assignment Form
 
-A React project that replicates the Figma design with pixel-perfect accuracy.
+A React project that replicates the Figma design with pixel-perfect accuracy. This project implements a page selection modal form matching the exact specifications from the Figma design.
 
 ## Features
 
-- **Button Component**: Three yellow "Done" buttons with hover effects
-- **Home Component**: List of checkboxes with various states (unchecked, indeterminate, checked)
-- **Modal Component**: Interactive modal with input field, page list, avatars, and checkboxes
+- **Modal Component**: Interactive page selection form with:
+  - Header section with "All pages" text and checkbox
+  - Page list with individual checkboxes (Page 1-4)
+  - Separator lines with proper spacing
+  - Yellow "Done" button with hover effects
+  - Custom styled checkboxes with blue selected state
+  - Inter font family matching Figma design
 
 ## Getting Started
 
@@ -49,17 +53,15 @@ npm run preview
 test-assignment-form/
 ├── src/
 │   ├── components/
-│   │   ├── Button.jsx       # Button component
-│   │   ├── Button.css
-│   │   ├── Home.jsx         # Home component with checkboxes
-│   │   ├── Home.css
-│   │   ├── Modal.jsx        # Modal component
-│   │   └── Modal.css
+│   │   ├── Modal.jsx        # Modal form component
+│   │   └── Modal.css        # Modal styles
 │   ├── App.jsx              # Main app component
-│   ├── App.css
+│   ├── App.css              # App styles
 │   ├── main.jsx             # Entry point
-│   └── index.css            # Global styles
-├── index.html
+│   └── index.css            # Global styles and font setup
+├── public/
+│   └── react-favicon.svg    # React favicon
+├── index.html               # HTML entry point with Inter font
 ├── package.json
 ├── vite.config.js
 └── README.md
@@ -70,29 +72,59 @@ test-assignment-form/
 - React 18.2.0
 - Vite 5.0.8
 - CSS3
+- Inter Font (Google Fonts)
 
 ## Component Details
 
-### Button Component
-- Yellow background (#FFD700)
-- Black text
-- Rounded corners
+### Modal Component
+
+The main component is a page selection modal form that includes:
+
+**Header Section:**
+- "All pages" text label
+- Unchecked checkbox on the right
+- Thin separator line below with 20px side margins
+
+**Page List Section:**
+- Four page items (Page 1, Page 2, Page 3, Page 4)
+- Each page has a checkbox on the right
+- Page 2 is checked by default (blue background with white checkmark)
+- Hover effects on page items
+- Custom styled checkboxes with:
+  - Gray border when unchecked
+  - Blue background (#2563EB) when checked
+  - White checkmark icon perfectly centered
+  - Smooth transitions
+
+**Footer Section:**
+- Thin separator line above button with 20px side margins
+- Yellow "Done" button (#FFD700)
+- Button has 20px margins on all sides
 - Hover and active states
 
-### Home Component
-- List of 8 items with "All pages" text
-- Each item has two checkboxes (small on left, large on right)
-- Supports checked, unchecked, and indeterminate states
-- Interactive checkbox functionality
-
-### Modal Component
-- White modal with rounded corners
-- Input field with green border (focused state)
-- List of pages with checkboxes
-- Avatar icons for Page 1 (purple "k" and green "D")
-- Yellow "Done" button at the bottom
+**Styling Features:**
+- Inter font family (weights 400 and 500)
+- Rounded corners (8px modal, 4px checkboxes)
+- Subtle shadow and border
+- Proper spacing and padding throughout
+- Responsive design
 
 ## Design Reference
 
-The design is based on the Figma file: [Figma Design Link](https://www.figma.com/design/dwBFtlKY933OJWWSrGPs5q/Frontend?node-id=0-1)
+The design is based on the Figma file:
+- [Figma Design](https://www.figma.com/design/dwBFtlKY933OJWWSrGPs5q/Frontend?node-id=0-1)
+- [Figma Prototype](https://www.figma.com/proto/dwBFtlKY933OJWWSrGPs5q/Frontend?node-id=1-140&p=f&t=Qi8iJ8qcH1nHFEVV-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1)
+
+## Design Specifications
+
+- **Font**: Inter (weights 400 and 500)
+- **Colors**:
+  - Checkbox selected: #2563EB (blue)
+  - Checkbox border: #D1D5DB (gray)
+  - Separator: #E5E7EB (light gray)
+  - Button: #FFD700 (yellow)
+  - Text: #333333 (dark gray)
+- **Spacing**: 20px horizontal padding throughout
+- **Border Radius**: 8px (modal), 4px (checkboxes)
+- **Checkbox Size**: 18px × 18px
 
